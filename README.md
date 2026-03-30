@@ -1,119 +1,253 @@
-MindBalance AI
+# 🧠 MindBalance AI — Privacy-First Emotion Aware Wellness Companion
 
-A privacy-first, face-aware wellness companion built entirely in the browser.
-
-Live Application:
+🔗 **Live Application:**  
 https://mind-balance-ai.netlify.app
 
-About the Project
+MindBalance AI is a **privacy-first, browser-based wellness application** that detects emotions in real time and adapts the user experience accordingly.
 
-MindBalance AI is a single-file, browser-based wellness application that detects your emotions in real time and adjusts your experience automatically.
+The application integrates **facial emotion recognition, cognitive training games, mood analytics, and adaptive audio generation** into a single lightweight system.
 
-It combines facial emotion recognition, brain training games, mood analytics, and real-time sound generation into one lightweight application. Everything runs locally in your browser with no backend, no user accounts, no database, and no cloud storage.
+Unlike many AI applications, **MindBalance AI runs entirely inside the browser**.  
+There is **no backend server, no database, and no user accounts**.
 
-The entire system works from a single HTML file.
+All processing happens locally on the user's device, making it both **fast and privacy-preserving**.
 
-Features
-Real-Time Emotion Detection
+The entire application is implemented as a **single HTML file**.
 
-Using your webcam, the app detects seven emotions: happy, sad, angry, fearful, neutral, surprised, and disgusted.
+---
 
-It continuously analyzes facial expressions and applies a stability window to prevent sudden mood changes caused by minor facial movements. Negative emotions are slightly boosted to better detect stress-related states.
+# 🚀 Project Overview
 
-All processing happens locally using in-browser machine learning.
+MindBalance AI was designed as an experiment in **modern browser-based artificial intelligence and wellness technology**.
 
-Brain Training Games
+The goal was to create a system that can:
 
-The application includes four interactive cognitive games designed to improve focus, memory, and mental speed:
+• Detect emotional states in real time  
+• Provide adaptive relaxation or focus tools  
+• Track emotional trends over time  
+• Improve cognitive performance through games  
 
-Memory Vault — Recall growing digit sequences
+All while maintaining **complete user privacy**.
 
-Pattern Flash — Repeat flashing tile patterns
+The result is a **self-contained AI wellness assistant that operates fully in the browser**.
 
-Color Stroop — Identify the ink color instead of the word
+---
 
-Math Sprint — Solve arithmetic problems under time pressure
+# 😊 Real-Time Emotion Detection
 
-XP, best scores, and progress are stored locally. No login is required.
+The application uses the webcam to analyze facial expressions and classify emotions.
 
-Analytics and Mood Tracking
+### Detected Emotions
 
-The app provides:
+• Happy  
+• Sad  
+• Angry  
+• Fearful  
+• Neutral  
+• Surprised  
+• Disgusted  
 
-Emotion frequency bar charts
+To avoid unstable predictions, the system uses a **stability window** that smooths emotion changes across frames.
 
-Mood score trend lines
+Negative emotions are slightly boosted to improve detection of **stress or fatigue related states**.
 
-Session history tracking
+All analysis runs locally using **in-browser machine learning models**.
 
-All data is stored in the browser using localStorage, allowing progress to persist without any server involvement.
+---
 
-Adaptive Audio Engine
+# 🎮 Brain Training Games
 
-Instead of relying on audio files, the app generates sound in real time using the Web Audio API.
+MindBalance AI includes four cognitive training games designed to improve memory, focus, and mental agility.
 
-Available modes include:
+### Memory Vault
+Players must recall an increasingly long sequence of digits.
 
-Focus Mode — Gamma binaural beats
+### Pattern Flash
+A pattern of tiles flashes briefly and the player must repeat the sequence.
 
-Calm Mode — Harmonic ambient pads with filtered noise
+### Color Stroop
+Players must identify the **ink color of a word**, not the written word itself.
 
-Energy Mode — Rhythmic pulse stimulation
+### Math Sprint
+Users solve arithmetic problems quickly under time pressure.
 
-Nature Mode — Procedural rain and cricket ambience
+Game progress includes:
 
-No MP3 files are used. All audio is synthesized dynamically in the browser.
+• XP tracking  
+• High scores  
+• Session performance  
 
-Technologies Used
-face-api.js (v0.22.2)
+All data is saved locally with **no login required**.
 
-Used for facial detection and emotion recognition. It includes TinyFaceDetector for fast face detection and FaceExpressionNet for emotion probability prediction.
+---
 
-Model weights load once from GitHub and then run entirely in the browser using TensorFlow.js.
+# 📊 Mood Analytics and Tracking
 
-Chart.js (v4.4.0)
+The application visualizes emotional trends using interactive charts.
 
-Used to render emotion frequency bar charts and mood trend line graphs. It provides responsive and clean data visualization.
+### Analytics Dashboard
 
-Web Audio API
+The dashboard provides:
 
-A native browser API used to generate oscillators, create binaural beats, produce filtered noise, and dynamically control layered audio.
+• Emotion frequency bar charts  
+• Mood score trend graphs  
+• Session history tracking  
 
-No external audio files are used.
+All data is stored using **browser localStorage**, allowing users to track their emotional patterns over time without sending any data to a server.
 
-Web Notifications API
+---
 
-Used to send stress alerts and periodic wellness reminders.
+# 🎧 Adaptive Audio Engine
 
-localStorage
+MindBalance AI generates sound dynamically using the **Web Audio API**.
 
-Stores emotion history, game scores, XP, and user preferences. All data remains on the device.
+Instead of using audio files, the system synthesizes audio signals directly in the browser.
 
-Modern CSS (Custom Properties and clamp())
+### Available Modes
 
-Used for fluid typography, responsive layouts, brightness ring customization, and consistent theming. The app adapts smoothly from 320px mobile screens to full desktop displays.
+**Focus Mode**  
+Gamma binaural beats designed to enhance concentration.
 
-Privacy and Security
+**Calm Mode**  
+Soft harmonic ambient pads combined with filtered noise.
 
-MindBalance AI is built with privacy as a core principle.
+**Energy Mode**  
+Rhythmic pulse stimulation designed to increase alertness.
 
-Camera feed is processed locally
+**Nature Mode**  
+Procedural rain ambience and cricket sounds generated algorithmically.
 
-No video or images are uploaded
+Because all audio is synthesized, **no MP3 or external audio files are required**.
 
-No analytics tracking
+---
 
-No backend server
+# 🛠 Technologies Used
 
-No database
+### face-api.js (v0.22.2)
 
-The only external requests are for face-api.js model weights (on first load), optional Google Fonts, and the Chart.js CDN.
+Used for **facial detection and emotion recognition**.
 
-Everything else runs locally in the browser.
+Includes:
 
-If you clear your browser data, everything resets completely.
+• TinyFaceDetector for fast face detection  
+• FaceExpressionNet for emotion classification  
 
-MindBalance AI
+Model weights are downloaded once and then executed entirely in the browser using **TensorFlow.js**.
+
+---
+
+### Chart.js (v4.4.0)
+
+Used to render interactive visualizations including:
+
+• Emotion frequency bar charts  
+• Mood trend line graphs  
+
+The charts are responsive and update dynamically as new data is recorded.
+
+---
+
+### Web Audio API
+
+A native browser API used to generate:
+
+• Oscillators  
+• Binaural beats  
+• Filtered noise  
+• Dynamic layered sound environments  
+
+This allows real-time sound synthesis without external files.
+
+---
+
+### Web Notifications API
+
+Used to send:
+
+• Stress alerts  
+• Periodic wellness reminders  
+
+Notifications help encourage healthy breaks and mindfulness.
+
+---
+
+### localStorage
+
+Used to persist user data locally including:
+
+• Emotion history  
+• Game scores  
+• XP progress  
+• User preferences  
+
+All information stays on the user's device.
+
+---
+
+### Modern CSS
+
+The interface uses modern CSS features such as:
+
+• CSS custom properties  
+• clamp() responsive typography  
+• fluid layouts  
+• adaptive brightness rings  
+
+The application scales smoothly from **320px mobile screens to large desktop monitors**.
+
+---
+
+# 🔐 Privacy and Security
+
+MindBalance AI is designed with **privacy as a core principle**.
+
+Key privacy protections include:
+
+• Camera processing occurs locally  
+• No video or images are uploaded  
+• No analytics tracking  
+• No backend server  
+• No cloud database  
+
+The only external resources requested are:
+
+• face-api.js model weights (first load only)  
+• Chart.js CDN  
+• Optional Google Fonts  
+
+After loading, **all processing happens entirely inside the browser**.
+
+If the user clears their browser data, all stored information is removed.
+
+---
+
+# 🎯 Key Features
+
+• Real-time facial emotion detection  
+• Emotion-aware adaptive wellness tools  
+• Interactive cognitive training games  
+• Mood analytics and visual tracking  
+• Procedural audio generation with Web Audio API  
+• Fully browser-based AI system  
+• No accounts, no database, no backend  
+• Privacy-first architecture  
+
+---
+
+# 🌐 Live Application
+
+MindBalance AI  
 https://mind-balance-ai.netlify.app
+
+---
+
+# ⚠️ Disclaimer
+
+MindBalance AI is intended for **wellness exploration and educational purposes only**.
+
+It is **not a medical or psychological diagnostic tool**.  
+For professional mental health support, please consult a licensed healthcare professional.
+
+---
 
 Built with curiosity, experimentation, and modern browser technologies.
